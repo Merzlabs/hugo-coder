@@ -20,6 +20,16 @@
               <i class="fas fa-clock"></i>
               {{ i18n "reading_time" .ReadingTime }}
             </span>
+            {{- range .Params.authors }}
+            {{- with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) }}
+            <figure>
+              <img src="{{ .Params.photo }}" alt="" />
+              <figcaption>
+                <a href="{{ .Permalink }}">{{ .Params.name }}</a>
+              </figcaption>
+            </figure>
+            {{ end }}
+            {{ end }}
           </div>
           {{ with .Page.Params.Categories }}{{ partial "taxonomy/categories.html" . }}{{ end }}
           {{ with .Page.Params.Tags }}{{ partial "taxonomy/tags.html" . }}{{ end }}
