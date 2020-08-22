@@ -1,6 +1,6 @@
 {{ define "title" }}
-  {{- if eq .Kind "taxonomy" -}}
-    {{- .Data.Singular | title -}}
+  {{- if eq .Kind "term" -}}
+    {{- i18n .Data.Singular | title -}}
     {{- print ": " -}}
   {{- end -}}
 

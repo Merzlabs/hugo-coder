@@ -16,7 +16,7 @@ body {
 	font-size: 1.6em;
 	font-weight: 300;
   line-height: 1.8em;
-  @media only screen and (max-device-width : 768px) {
+  @media only screen and (max-width : 768px) {
     font-size: 1.6em;
     line-height: 1.6em;
   }
@@ -51,7 +51,7 @@ h6 {
 h1 {
   font-size: 3.2rem;
   line-height: 3.6rem;
-  @media only screen and (max-device-width : 768px) {
+  @media only screen and (max-width : 768px) {
     font-size: 3.0rem;
     line-height: 3.4rem;
   }
@@ -59,7 +59,7 @@ h1 {
 h2 {
   font-size: 2.8rem;
   line-height: 3.2rem;
-  @media only screen and (max-device-width : 768px) {
+  @media only screen and (max-width : 768px) {
     font-size: 2.6rem;
     line-height: 3.0rem;
   }
@@ -67,7 +67,7 @@ h2 {
 h3 {
   font-size: 2.4rem;
   line-height: 2.8rem;
-  @media only screen and (max-device-width : 768px) {
+  @media only screen and (max-width : 768px) {
     font-size: 2.2rem;
     line-height: 2.6rem;
   }
@@ -75,7 +75,7 @@ h3 {
 h4 {
   font-size: 2.2rem;
   line-height: 2.6rem;
-  @media only screen and (max-device-width : 768px) {
+  @media only screen and (max-width : 768px) {
     font-size: 2.0rem;
     line-height: 2.4rem;
   }
@@ -83,7 +83,7 @@ h4 {
 h5 {
   font-size: 2.0rem;
   line-height: 2.4rem;
-  @media only screen and (max-device-width : 768px) {
+  @media only screen and (max-width : 768px) {
     font-size: 1.8rem;
     line-height: 2.2rem;
   }
@@ -91,7 +91,7 @@ h5 {
 h6 {
   font-size: 1.8rem;
   line-height: 2.2rem;
-  @media only screen and (max-device-width : 768px) {
+  @media only screen and (max-width : 768px) {
     font-size: 1.6rem;
     line-height: 2.0rem;
   }
@@ -101,16 +101,23 @@ b, strong {
   font-weight: 700;
 }
 
+.highlight > div,
+.highlight > pre {
+  margin: 0 0 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
 pre {
   display: block;
   font-family: $code-font-family;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.6rem;
-  margin: 2.0rem 0 2.0rem 0;
-  padding: 2.0rem;
   overflow-x: auto;
+  margin: 0;
   code {
+    display: inline-block;
     background-color: inherit;
     color: inherit;
   }
@@ -122,7 +129,6 @@ code {
   font-weight: 400;
   background-color: $alt-bg-color;
   color: $fg-color;
-  padding: 0.2rem 0.4rem 0.2rem 0.4rem;
 }
 
 blockquote {
@@ -159,6 +165,10 @@ table tr th:last-child {
 
 img {
   max-width: 100%;
+}
+
+figure {
+  text-align: center;
 }
 
 .wrapper {
@@ -199,4 +209,11 @@ img {
 
 .fas {
   font-weight: 900;
+}
+
+img.emoji {
+  height: 1em;
+  width: 1em;
+  margin: 0 .05em 0 .1em;
+  vertical-align: -0.1em;
 }
