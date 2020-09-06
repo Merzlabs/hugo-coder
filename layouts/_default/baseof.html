@@ -89,7 +89,7 @@
 
     {{ hugo.Generator }}
   </head>
-  
+
   {{ $csClass := "colorscheme-light" }}
   {{ if eq .Site.Params.colorscheme "dark" }}
     {{ $csClass = "colorscheme-dark" }}
@@ -105,6 +105,9 @@
       <div class="content">
         {{ block "content" . }}{{ end }}
       </div>
+
+      <!-- Convertkit Newsletter -->
+      <script async data-uid="47c157c47c" src="https://merzlabs.ck.page/47c157c47c/index.js"></script>
 
       {{ partial "footer.html" . }}
     </main>
